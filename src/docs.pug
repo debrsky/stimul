@@ -1,0 +1,56 @@
+---
+layout: base.njk
+title: Документы
+eleventyNavigation:
+  key: Документы
+  order: 2
+---
+
+
+include _includes/file.pug
+include _includes/pdf.svg
+
+article
+  h2.h2=title
+  table.table
+    tbody 
+      tr 
+        td 1
+        td Приказ О создании спортивного студенческого клуба #[q Стимул]
+        td.center 
+          +file("/files/order.pdf")
+
+      tr 
+        td 2
+        td Положение о СКК #[q Стимул]
+        td.center 
+          +file("/files/regulations.pdf")
+
+      tr 
+        td 3
+        td Протокол №1 Учредительного собрания ССК #[q Стимул]
+        td.center 
+          +file("/files/protocol-1.pdf")
+
+      tr 
+        td 4
+        td Протокол №2 Общего собрания ССК #[q Стимул]
+        td.center 
+          +file("/files/protocol-2.pdf")
+
+      tr 
+        td 5
+        td Свидетельство о членстве в #[a(href="https://www.асскчемп.рф/" target="_blank") Ассоциации студенческих спортивных клубах России]
+        td.center 
+          +file("/files/certificate.pdf")
+
+      tr 
+        td 6
+        td 
+          | План участия в реализации Всероссийского спортивно-массового молодежного проекта 
+          q Чемпионат Ассоциации студенческих спортивных клубов России
+        td.center 
+          +file("/files/plan-2021.pdf")
+
+
+

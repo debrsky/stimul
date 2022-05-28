@@ -1,0 +1,13 @@
+---
+layout: base.njk
+title: Соревнования
+eleventyNavigation:
+  key: Соревнования
+  order: 5
+---
+
+h2.h2 Соревнования
+
+ul
+  each competition in collections.competition
+    li: a(href=competition.url)=competition.data.title

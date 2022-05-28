@@ -1,0 +1,236 @@
+*, *::after, *::before {
+  box-sizing: inherit;
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  /* https://allyjs.io/tutorials/hiding-elements.html */
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+:root {
+  box-sizing: border-box;
+  font: 16px/1.15 Arial, Helvetica, sans-serif;
+  background-color: white;
+
+  --color-text: #444;
+  --color-bg: white;
+}
+
+body {
+  margin: 0;
+  padding: 0 1em;
+  max-width: 968px;
+  min-height: 100vh;
+  background-color: white;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+main {
+  position: relative;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+summary {
+  cursor: pointer;
+}
+
+.center {
+  text-align: center;
+}
+
+.header {
+  min-height: 3em;
+  background-color: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  position: relative;
+  margin-bottom: 1em;
+}
+
+.header__title {
+  display: flex;
+  place-content: center;
+  place-items: center;
+}
+
+.header__title-link {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: black;
+  text-shadow: 0 0 4px white, 2px 0 4px white, -2px 0 4px white, 0 2px 4px white, 0 -2px 4px white;
+  background-color: #0f86cd;
+  padding: 0.2em;
+  border-radius: 0.25em;
+}
+
+.header__nav {
+  position: absolute;
+  right: 0;
+  top: 100%;
+  border: 1px solid lightgrey;
+  box-shadow: 0 1em 1em 0 lightgrey;
+  background-color: inherit;
+  padding: 0.5em;
+  flex-direction: column;
+  align-items: center;
+  display: none;
+  z-index: 10;
+}
+
+.header__nav--open {
+  display: flex;
+}
+
+@media (min-width: 768px) {
+  .header__nav {
+    display: flex;
+    position: static;
+    border: none;
+    box-shadow: none;
+    flex-direction: row;
+  }
+}
+
+.header__nav-toggle {
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .header__nav-toggle {
+    display: none;
+  }
+}
+
+/* nav */
+.nav {
+  margin: 0;
+  min-height: 3em;
+  list-style-type: none;
+  flex-wrap: wrap;
+  align-content: center;
+  gap: 1em;
+}
+
+.nav__item {
+  margin: 0;
+  flex-grow: 1;
+}
+
+.nav__link {
+  font-weight: bold;
+  text-decoration: none;
+  color: var(--color-text);
+  text-transform: uppercase;
+}
+
+.nav__link:hover {
+  border-bottom: 3px solid #254e9d;
+}
+
+.nav__toggle {
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  background-repeat: no-repeat;
+
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 18'%3E%3Cpath d='M0 16h24v2H0zm0-8h24v2H0zm0-8h24v2H0z'/%3E%3C/svg%3E");
+  background-size: 24px 18px;
+  background-position: 6px 16px;
+}
+
+.nav__toggle--open {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 18'%3E%3Cpath d='M18 1.3L16.7 0 9 7.7 1.3 0 0 1.3 7.7 9 0 16.7 1.3 18 9 10.3l7.7 7.7 1.3-1.3L10.3 9z'/%3E%3C/svg%3E");
+  background-size: 18px 18px;
+  background-position: 9px 15px;
+}
+
+/* file */
+.file {
+  display: inline-block;
+  padding: 0.5em;
+  background-color: whitesmoke;
+  border-radius: 0.5em;
+}
+
+.file:hover {
+  background-color: silver;
+}
+
+.file__container {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+/* table */ 
+.table {
+  margin: auto;
+  border-collapse: collapse;
+}
+
+.table td {
+  padding: 0.25em;
+  border-top: 1px solid lightgrey;
+  border-bottom: 1px solid lightgrey;
+}
+
+/* staff */
+
+.staff {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  justify-content: center;
+}
+
+.staff__item {
+  max-width: 300px;
+}
+
+/* person */
+.person {
+  margin: 0;
+  padding: 0;
+}
+
+/* sport-section */
+
+.sport-section {
+  padding: 0.5em;
+  border: 1px solid lightgrey;
+}
+
+.sport-section:not(:last-child) {
+  margin-bottom: 0.5em;
+}
+
+.sport-section__summary {
+  padding: 0;
+}
+
+.sport-section__place-holder {
+  min-height: 10em;
+}

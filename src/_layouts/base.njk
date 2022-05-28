@@ -1,0 +1,51 @@
+---
+title: ССК Стимул
+---
+
+<!doctype html>
+<html lang="ru" class="page">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{title}}. ССК Стимул</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body class="page__body">
+    <header class="header">
+      <div class="header__title">
+        <a class="header__title-link" href="/">ССК <q>Стимул</q></a>
+      </div>
+        {% include "../_includes/nav.njk" %}
+      <div class="header__nav-toggle">
+        <button class="nav__toggle">
+          <span class="visually-hidden">Кнопка меню</span>  
+        </button>
+        <script>
+          const toggle = document.querySelector('.nav__toggle');
+          const nav = document.querySelector('.header__nav');
+          toggle.addEventListener('click', (event) => {
+            console.log('toggle');
+
+            const isMenuOpen = nav.classList.contains('header__nav--open');
+            if (isMenuOpen) {
+              nav.classList.remove('header__nav--open');
+              toggle.classList.remove('nav__toggle--open');
+              return;
+            }
+
+              nav.classList.add('header__nav--open');
+              toggle.classList.add('nav__toggle--open');
+          });
+        </script>
+      </div>
+    </header>
+
+    <main class="content">
+      {{ content | safe }}
+    </main>
+
+    <footer class="footer">
+
+    </footer>
+  </body>
+</html>

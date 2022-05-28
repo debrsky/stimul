@@ -1,0 +1,20 @@
+---
+layout: base.njk
+title: Администрация
+eleventyNavigation:
+  key: Администрация
+  order: 4 
+---
+
+
+mixin person(img, alt, title)
+  figure.person
+    a(href=img): img.person__image(src=img alt=alt)
+    figcaption.person__title=title
+
+article 
+  h2.h2 Администрация клуба
+  .staff
+    .staff__item: +person("/img/staff/kimberma@1024.jpg", "Кимбер Михаил Адреевич у парапета на берегу реки", "Руководитель клуба — Кимбер Михаил Адреевич")
+    .staff__item: +person("/img/staff/kashirinadv@1024.jpg", "Каширина Дарья Владимировна", "Председатель клуба — Каширина Дарья Владимировна")
+    .staff__item: +person("/img/staff/kravchenkoaa@1024.jpg", "Кравченко Анастасия Андреевна", "Секретарь клуба — Кравченко Анастасия Андреевна")

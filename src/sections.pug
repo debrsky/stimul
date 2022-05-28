@@ -1,0 +1,45 @@
+---
+layout: base.njk
+title: Секции
+eleventyNavigation:
+  key: Секции
+  order: 3
+sections: 
+  - баскетбол
+  - волейбол
+  - мини-футбол
+  - настольный теннис
+  - шахматы
+  - киберспорт
+---
+
+
+mixin section(title)
+  details.sport-section
+    summary.sport-section__summary=title
+    .sport-section__details 
+      | Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+      | Mauris sodales id metus ac maximus. In nec magna sed nulla hendrerit laoreet. 
+      | Maecenas condimentum hendrerit fermentum. Maecenas eu tincidunt lacus, a blandit libero. 
+      | Suspendisse eu elementum turpis, non rhoncus dolor. 
+      | Vestibulum convallis, purus vel iaculis tincidunt, magna dolor blandit turpis, eu convallis neque dui ut lacus. 
+      | Suspendisse sem urna, faucibus nec accumsan in, bibendum in nulla. 
+      | Duis pulvinar enim tellus, nec lobortis massa egestas et. Nullam volutpat libero nec eros dignissim luctus vel non enim.
+
+include _includes/file.pug
+include _includes/pdf.svg
+
+table.table 
+  tbody 
+    tr 
+      td 
+        | Расписание занятий спортивных секций
+        br
+        | в 2021-2022 учебном году
+      td: +file("/files/sections.pdf")
+
+section 
+  h2.h2 Спортивные секции
+
+  each section in sections
+    +section(section)

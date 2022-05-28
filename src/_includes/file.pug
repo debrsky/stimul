@@ -1,0 +1,6 @@
+mixin file(href)
+  a.file(href=href)
+    figure.file__container
+      svg.file__image(height="50" width="50")
+        use(xlink:href="#icon-pdf")
+      figcaption.file__image=href.match(/\/([^/]+)$/)[1]
