@@ -163,7 +163,7 @@ summary {
   color: var(--color-text);
   text-transform: uppercase;
 }
-
+.nav__item--active .nav__link,
 .nav__link:hover {
   border-bottom: 3px solid var(--color-accent);
 }
