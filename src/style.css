@@ -78,9 +78,11 @@ summary {
   text-transform: uppercase;
   color: black;
   text-shadow: 0 0 4px white, 2px 0 4px white, -2px 0 4px white, 0 2px 4px white, 0 -2px 4px white;
+  box-shadow: 0 0 10px 0 #0f86cd;
   background-color: #0f86cd;
-  padding: 0.2em;
+  padding: 0.3em;
   border-radius: 0.25em;
+  display: block;
 }
 
 .header__nav {
@@ -101,7 +103,7 @@ summary {
   display: flex;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 800px) {
   .header__nav {
     display: flex;
     position: static;
@@ -115,7 +117,7 @@ summary {
   display: block;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 800px) {
   .header__nav-toggle {
     display: none;
   }
