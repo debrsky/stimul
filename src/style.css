@@ -53,6 +53,12 @@ summary {
   cursor: pointer;
 }
 
+.vk {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
 .center {
   text-align: center;
 }
@@ -82,7 +88,12 @@ summary {
   background-color: #0f86cd;
   padding: 0.3em;
   border-radius: 0.25em;
+  border: 1px solid #0f86cd;
   display: block;
+}
+
+.header__title-link:hover {
+  box-shadow: 0 0 10px 0 #0f86cd, 0 0 5px 0 #0f86cd, 0 0 15px 0 #0f86cd;
 }
 
 .header__nav {
@@ -121,6 +132,13 @@ summary {
   .header__nav-toggle {
     display: none;
   }
+}
+
+.footer {
+  display: flex;
+  place-content: center;
+  place-items: center;
+  min-height: 4em;
 }
 
 /* nav */
