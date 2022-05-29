@@ -52,6 +52,11 @@ img {
   object-fit: contain;
 }
 
+:where(a:not([href^=http])) {
+  text-decoration: none;
+  color: var(--color-accent)
+}
+
 summary {
   cursor: pointer;
 }
