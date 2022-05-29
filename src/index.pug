@@ -3,9 +3,9 @@ layout: base.njk
 title: Главная
 ---
 
-article(style="display: grid; grid-template-rows: auto 1fr;")
+article(style="position: absolute; inset: 0; display: grid; grid-template-rows: auto 1fr;")
   h2.h2 Cтуденческий спортивный клуб <q>Стимул</q>
-  div(style="display: flex; place-content: center; place-items: center;")
-    img(style="filter: drop-shadow(0 0.5em 1em #0f86cd);" src="/img/logo.png", alt="", width="400")
+  div(style="min-height: 0; padding: 0 3em; display: flex; place-content: center; place-items: center;")
+    img(style="max-height: 100%; filter: drop-shadow(0 0.5em 1em var(--color-accent));" src="/img/logo.png", alt="")
 
 
