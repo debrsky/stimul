@@ -24,7 +24,8 @@ input[type="radio"].visually-hidden {
 :root {
   box-sizing: border-box;
   font: 16px/1.15 Arial, Helvetica, sans-serif;
-  background-color: white;
+  background-color: whitesmoke;
+  height: 100%;
 
   --color-text: #444;
   --color-bg: white;
@@ -35,7 +36,7 @@ body {
   margin: 0;
   padding: 0 1em;
   max-width: 968px;
-  min-height: 100vh;
+  min-height: 100%;
   background-color: white;
   display: grid;
   grid-template-rows: auto 1fr auto;
