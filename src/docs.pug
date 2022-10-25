@@ -12,47 +12,64 @@ include _includes/pdf.svg
 
 article
   h2.h2=title
-  table.table
-    tbody 
-      tr 
-        td 1
-        td Устав спортивного студенческого клуба #[q Стимул]
-        td.center 
-          +file("/files/charter.pdf")
 
-      tr 
-        td 2
-        td Протокол №1 Учредительного собрания ССК #[q Стимул]
-        td.center 
-          +file("/files/protocol-1.pdf")
+  section 
+    h3.h3 Лицензия
+    .license(style="display: flex;")
+      each pageNo in [1, 2, 3, 4]
+        a(href=`/img/license/license-${pageNo}-4.jpg`)
+          img(width="100", style="display: block;", src=`/img/license/preview/license-${pageNo}-4@400.jpg`)
 
-      tr 
-        td 3
-        td Протокол №2 Общего собрания ССК #[q Стимул]
-        td.center 
-          +file("/files/protocol-2.pdf")
+  section
+    h3.h3 Документы
+    table.table
+      tbody 
+        tr 
+          td 1
+          td Устав спортивного студенческого клуба #[q Стимул]
+          td.center 
+            +file("/files/2022/charter.pdf")
 
-      tr 
-        td 4
-        td Свидетельство о членстве в #[a(href="https://www.асскчемп.рф/" target="_blank") Ассоциации студенческих спортивных клубов России]
-        td.center 
-          +file("/files/certificate.pdf")
+        tr 
+          td 2
+          td Протокол №1 Учредительного собрания ССК #[q Стимул]
+          td.center 
+            +file("/files/protocol-1.pdf")
 
-      tr 
-        td 5
-        td Календарный план спортивных мероприятий ССК #[q Стимул] на 2021-2022 учебный год
-        td.center 
-          +file("/files/calendar-plan.pdf")
+        tr 
+          td 3
+          td Протокол №2 Общего собрания ССК #[q Стимул]
+          td.center 
+            +file("/files/protocol-2.pdf")
 
-      tr 
-        td 6
-        td 
-          | План участия в реализации Всероссийского спортивно-массового молодежного проекта 
-          q Чемпионат Ассоциации студенческих спортивных клубов России
-        td.center 
-          +file("/files/plan-2021.pdf")
-      tr 
-        td 7
-        td Расписание занятий спортивных секций ССК #[q Стимул]
-        td.center 
-          +file("/files/sections.pdf")
+        tr 
+          td 4
+          td Свидетельство о членстве в #[a(href="https://www.асскчемп.рф/" target="_blank") Ассоциации студенческих спортивных клубов России]
+          td.center 
+            +file("/files/certificate.pdf")
+
+        tr 
+          td 5
+          td Календарный план спортивно-массовых мероприятий и соревнований ССК #[q Стимул] 2022-2023
+          td.center 
+            +file("/files/2022/calendar-plan.pdf")
+
+        //- tr 
+        //-   td 6
+        //-   td 
+        //-     | План участия в реализации Всероссийского спортивно-массового молодежного проекта 
+        //-     q Чемпионат Ассоциации студенческих спортивных клубов России
+        //-   td.center 
+        //-     +file("/files/plan-2021.pdf")
+
+        tr 
+          td 6
+          td План спортивно-массовой работы на 2022-2023
+          td.center 
+            +file("/files/2022/sport-mass-plan.pdf")
+
+        tr 
+          td 7
+          td Расписание спортивных секций 2022&ndash;2023 ССК #[q Стимул]
+          td.center 
+            +file("/files/2022/sections.pdf")
